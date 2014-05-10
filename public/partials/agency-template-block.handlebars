@@ -1,0 +1,13 @@
+<div id="agency-list" class="panel panel-primary">
+  <div class="panel-heading">Choose your transport Agency</div>
+  <div class="panel-body">
+    {{#agencies}}
+      <div id="{{Name}}" data-filter-text="{{name}}" class="agency-row">
+        <a class="agency-selector" 
+            data-agency-name="{{Name}}">
+              {{Name}}
+        </a>
+      </div>
+    {{/agencies}}  
+  </div>
+</div>

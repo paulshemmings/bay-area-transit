@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="page-header">
+    <h1>Bay Area Transit</h1>
+    <p class="page-header-paragraph">Displaying expected arrival times loaded from <a href="http://511.org/developer-resources_transit-api.asp">511</a></p>
+    <p class="muted credit">Built on Node, Bootstrap, Handlebars</p>
+  </div>
+
+  <!-- agency/route selection -->
+
+  <div class="row" id="agency-route-selection">
+    <div id="agency-container">
+    </div>
+  </div>        
+  <div class="row">
+    <div id="agency-routes-container">
+    </div>            
+  </div>            
+
+  <!-- map (if we know where you are) -->
+
+  <div class="row" id="central-map-container">
+  </div>                              
+
+  <!-- Watched Route -->
+
+  <div class="row" id="watched-route-container">
+  </div>                  
+
+  <!-- Stops -->
+
+  <div class="row">
+      <div id="stop-codes-container">
+      </div>                        
+  </div> 
+</div>
+
+<div id="push"></div>

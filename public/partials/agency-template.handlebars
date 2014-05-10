@@ -1,0 +1,15 @@
+      <table id="agency-list" class="table table-hover">
+        <thead>
+          <th>Agency</th>
+        </thead>
+        <tbody>
+          {{#agencies}}
+            <tr id="{{$.Name}}">
+              <td class="agency-selector" 
+                  data-agency-name="{{$.Name}}">
+                    {{$.Name}}
+              </td>
+            </tr>
+          {{/agencies}}
+        </tbody>
+      </table>   

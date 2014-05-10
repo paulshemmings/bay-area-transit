@@ -1,0 +1,38 @@
+<div id="selected-journey-container"
+  data-arrival-times="{{arrivalTimes}}" 
+  data-route-name="{{routeName}}"
+  data-journey-distance-text="{{journeyDistance}}"
+  data-journey-duration-text="{{journeyDuration}}"
+  data-stop-code="{{stopCode}}"
+  data-stop-name="{{stopName}}"
+  data-calculated-required-departure-time="{{departureTime.yourDepartureTime}}"
+  data-calculated-bustrain-arrival-time="{{departureTime.estimatedArrivalTime}}"
+  data-calculated-journey-duration-value="{{departureTime.estimatedJourneyTime}}"
+  >
+  <hr style="margin-top:50px;"></hr>    
+  <p id="selected-journey" >
+    <span class="travel-stats">{{stopName}}</span> is 
+    <span class="travel-stats">{{journeyDistance}}</span> from your current location. 
+    It will take you roughly 
+    <span class="travel-stats">{{journeyDuration}}</span>  
+    to walk there.
+  </p>
+  {{#if departureTime.canReachStopInTime }}
+    <p>
+      The next bus/train you can catch departs in
+      <span id="estimated-arrival-time">{{departureTime.estimatedArrivalTime}}</span> minutes.
+      The very latest you can leave is in   
+    </p>
+    <div id="your-departure-time-container">
+      <span id="your-departure-time">{{departureTime.yourDepartureTime}}</span> minutes.
+    </div>         
+  {{else}}
+    <p id="selected-journey" data-absolute-times="{{absoluteTimes}}">
+      You cannot reach that stop in time to reach any of the buses or trains.
+    </p>
+  {{/if}}
+  <button type="button" class="btn btn-default watched-hint-refresh">
+    Refresh
+  </button>    
+  <hr style="margin-bottom:50px;"></hr>  
+</div>

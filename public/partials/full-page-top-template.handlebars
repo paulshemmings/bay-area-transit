@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="page-header">
+    <h1>Bay Area Transit</h1>
+    <p class="muted credit" style="display:inline-block; padding-left:20px">
+      Displaying expected arrival times loaded from <a href="http://511.org/developer-resources_transit-api.asp">511</a>
+      <br/>
+      Built on Node, Bootstrap, Handlebars
+    </p>
+  </div>
+
+  <!-- navigation container -->
+  
+  <div id="navigation-container"></div>
+
+  <!-- map (if we know where you are) -->
+
+  <div class="row panel panel-primary" id="central-map-container">
+    <div class="panel-heading" style="display:table;width:100%">
+      <div style="display:table-cell;width:100%">You are here. |</div>
+      <div style="display: table-cell; vertical-align: middle; width: 100%;">
+        <button id="toggle-map-view">Toogle</button>
+      </div>
+    </div>
+    <div class="panel-body">   
+      <div id="map-canvas">
+      </div>
+      <div id="map-button-container">
+        <button id="show-nearby-stops">Show Nearby Stops</button> |
+        <button id="clear-stops-on-map">Clear All Markers</button>      
+      </div>
+    </div>
+  </div>   
+
+  <!-- selection -->
+
+  <div class="row" id="selector-container">
+  </div>                                         
+
+</div>
+
+<div id="push"></div>

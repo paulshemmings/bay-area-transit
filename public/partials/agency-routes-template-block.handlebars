@@ -1,0 +1,26 @@
+<div id="agency-routes" 
+        data-agency-name="{{agencyName}}" 
+        data-has-direction="{{hasDirection}}"
+        class="panel panel-primary">
+
+  <div class="panel-heading">Choose the route</div>
+  <div class="panel-body">  
+    {{#routes}}
+      <div class="agencyRouteRow" id="{{Name}}" data-code="{{Code}}" data-filter-text="{{Name}}">
+        <div class="routeName" style="vertical-align:top">{{Name}}</div>
+
+        <div>
+          {{#RouteDirectionList}}
+            <ul style="padding:0;margin:0;text-wrap:unrestricted;font-size:0.8em">
+            {{#RouteDirection}}
+              <li class="routeDirection" id="{{Name}}" data-code="{{Code}}">{{Name}}</li>
+            {{/RouteDirection}}
+            </ul>                  
+          {{/RouteDirectionList}}
+        </div>
+
+      </div>
+    {{/routes}}  
+  </div>
+
+</div>

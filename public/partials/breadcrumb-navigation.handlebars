@@ -1,0 +1,65 @@
+<style>
+	.navigation-breadcrumb-container {
+		display:inline-block;
+		font-size:0.8em;
+	}
+	.navigation-breadcrumb-container span:before {
+		content: "\2022";
+	}
+</style>
+<div id="breadcrumb-navigation-container">
+
+	<div id="home-selector-container" class="navigation-breadcrumb-container">
+		<span class="home-selector"> 
+			<a>Home</a>
+		</span>
+	</div>
+
+{{#if agency}}
+	<div id="agency-selector-container" class="navigation-breadcrumb-container">
+		<span class="agency-selector" 
+				data-agency-name="{{agency.name}}" 
+				data-agency-code="{{agency.code}}">
+				<a>{{agency.name}}</a>
+		</span>
+	</div>
+{{/if}}		
+
+{{#if route}}
+	<div id="route-selector-container" class="navigation-breadcrumb-container">
+		<span class="route-selector" 
+				data-route-name="{{route.name}}" 
+				data-route-code="{{route.code}}"
+				data-route-direction-name="{{route.direction.name}}"
+				data-route-direction-code="{{route.direction.code}}">
+				<a>
+					{{route.name}}
+					{{#if route.direction.name}}
+						-- {{route.direction.name}}
+					{{/if}}
+				</a>
+		</span>
+	</div>
+{{/if}}
+
+{{#if stop}}
+	<div id="stop-selector-container" class="navigation-breadcrumb-container">
+		<span class="stop-selector" 
+				data-stop-name="{{stop.name}}" 
+				data-stop-code="{{stop.code}}">
+				<a>
+					{{stop.name}}
+				</a>
+		</span>
+	</div>
+{{/if}}	
+
+{{#if watched}}
+	<div id="watched" class="navigation-breadcrumb-container">
+		<span>
+			<a>{{watched.name}}</a>
+		</span>
+	</div>
+{{/if}}
+
+</div>

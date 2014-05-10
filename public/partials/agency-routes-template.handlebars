@@ -1,0 +1,24 @@
+<table id="agency-routes" class="table table-striped" data-agency-name="{{agencyName}}" data-has-direction="{{hasDirection}}">
+  <thead>
+    <th>
+      <input type="text" id="route-filter" placeholder="Route Name" />            
+    </th>
+    <th>Direction</th>
+  </thead>
+  <tbody>
+    {{#routes}}
+      <tr class="agencyRouteRow" id="{{$.Name}}" data-code="{{$.Code}}">
+        <td class="routeName">{{$.Name}}</td>
+        <td>
+          {{#RouteDirectionList}}
+            <ul>
+            {{#RouteDirection}}
+              <li class="routeDirection" id="{{$.Name}}" data-code="{{$.Code}}">{{$.Name}}</li>
+            {{/RouteDirection}}
+            </ul>                  
+          {{/RouteDirectionList}}
+        </tr>
+      </tr>
+    {{/routes}}
+  </tbody>
+</table>

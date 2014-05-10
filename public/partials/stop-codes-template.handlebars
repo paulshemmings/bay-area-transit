@@ -1,0 +1,21 @@
+<div id="stops-list-panel" class="panel panel-primary">
+
+  <div class="panel-heading">Choose the stop you want to use</div>
+  <div class="panel-body"> 
+    {{#stops}}
+      <div id="{{name}}"       	
+          class="stopRow" 
+          data-filter-text="{{name}}"
+      		data-agency-name="{{../agencyName}}" 
+      		data-route-name="{{../routeName}}"
+      		data-direction-name="{{../directionName}}"
+      		data-stop-code="{{StopCode}}" 
+      		data-stop-name="{{name}}">
+
+        <a class="stopName">{{name}}</a>
+        <div class="nextStop" style='text-align:right'>
+        </div>
+      </div>      
+    {{/stops}}
+  </div>
+</div>  

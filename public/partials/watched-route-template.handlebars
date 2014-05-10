@@ -1,0 +1,21 @@
+      {{# if departureTime.canReachStopInTime }}
+        <p id="selected-journey" data-route-name="{{routeName}}">
+          With an estimated journey time to the {{stopName}} of
+          <input type="text" id="estimated-journey-time" value="{{departureTime.estimatedJourneyTime}}" />
+          minutes, the next bus/train to {{routeName}} you can catch departs in 
+          <span id="estimated-arrival-time">{{departureTime.estimatedArrivalTime}}</span>
+          minutes. The very latest you can leave is in 
+        </p>
+        <div id="your-departure-time-container">
+          <span id="your-departure-time">{{yourDepartureTime}}</span> minutes.
+        </div>       
+      {{/if}}
+      {{# if departureTime.cannotReachStopInTime}}
+        <p id="selected-journey">
+          With an estimated journey time of 
+          <input type="text" id="estimated-journey-time" value="{{departureTime.estimatedJourneyTime}}" />
+          minutes you cannot make that bus
+        </p>
+        <hr style="margin-top:50px;">          
+        </hr>         
+      {{/if}}

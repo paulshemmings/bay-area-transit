@@ -1,0 +1,25 @@
+{
+    "name": "bay-area-transit",
+    "description": "Bay Area Transit Application",
+    "version": "1.0.0",
+    "private": false,
+    "author": "Paul Hemmings",
+    "engines": {
+        "node": "0.10.x",
+        "npm": "1.2.x"
+    },
+    "dependencies": {
+        "xml2js": "latest",
+        "karma": "latest",
+        "karma-jasmine": "*",
+        "jasmine-jquery": "*",
+        "karma-handlebars-preprocessor": "*",
+        "jasmine-node": "*",
+        "request": "*",
+        "karma-coverage": "*",
+        "karma-phantomjs-launcher": "*",
+        "karma-safari-launcher": "*",
+        "karma-chrome-launcher": "*",
+        "karma-firefox-launcher": "*"
+    }
+}

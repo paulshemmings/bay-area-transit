@@ -1,0 +1,20 @@
+<div class="panel panel-primary">
+	<div class="panel-heading">Estimated Arrival Times</div>
+	<div class="panel-body"> 
+		{{#routes}}
+			<div class="{{#if absoluteTimes}} {{#if selected}} selected {{/if}} arrival-times {{/if}}" 	
+					data-arrival-route-name="{{routeName}}"
+					data-selected-route-name="{{selectedRouteName}}"
+				    data-arrival-times="{{arrivalTimes}}"
+				    data-arrival-absolute-times="{{absoluteTimes}}"
+				    data-stop-code="{{stopCode}}">
+
+				<a class='stop-route-selection' data-route-name="{{routeName}}">
+			    	<span style="">{{routeName}}: </span>
+			    	<span style="float:right">{{arrivalTimes}}</span>
+			    </a>
+
+			</div>
+		{{/routes}}
+	</div>
+</div>

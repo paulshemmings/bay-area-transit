@@ -1,0 +1,65 @@
+<ol class="breadcrumb">
+
+	<li id="home-selector-container">
+		<a class="home-selector" href="#">Home</a>
+	</li>
+
+{{#if agency}}
+	<li id="agency-selector-container">
+		<a class="agency-selector" href="#" 
+			data-agency-name="{{agency.name}}" 
+			data-agency-code="{{agency.code}}">
+			{{agency.name}}
+		</a>
+	</li>
+{{/if}}		
+
+{{#if route}}
+	<li id="route-selector-container">
+		<a class="route-selector" 
+			data-route-name="{{route.name}}" 
+			data-route-code="{{route.code}}"
+			data-route-direction-name="{{route.direction.name}}"
+			data-route-direction-code="{{route.direction.code}}">
+			{{route.name}}
+			{{#if route.direction.name}}
+				-- {{route.direction.name}}
+			{{/if}}
+		</a>
+	</li>
+{{else}}
+	{{#if agency}}
+		<li>
+			<input id="route-filter" class="result-filter" data-target="route" type="text" placeholder="Route Name" />	
+		</li>
+	{{/if}}	
+{{/if}}
+
+{{#if stop}}
+	<li id="stop-selector-container">
+		<a class="stop-selector" 
+			data-stop-name="{{stop.name}}" 
+			data-stop-code="{{stop.code}}"
+			data-route-name="{{stop.route}}">
+			{{stop.name}}
+		</a>
+	</li>
+{{else}}
+	{{#if agency}}
+		{{#if route}}
+			<li>
+				<input id="stop-filter" class="result-filter" data-target="stop" type="text" placeholder="Stop Name" />	
+			</li>			
+		{{/if}}
+	{{/if}}
+{{/if}}	
+
+{{#if watched}}
+	<li id="watched">
+		<a class="stop-route-watcher">
+			{{watched.name}}
+		</a>
+	</li>
+{{/if}}
+
+</al>
